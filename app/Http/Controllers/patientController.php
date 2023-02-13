@@ -29,9 +29,5 @@ class patientController extends Controller
         return redirect()->route('pat')->with('success', "บันทึกข้อมูลเรียบร้อย");
     }
 
-    public function storeform(Request $request)
-    {
-
-        dd($request);
-    }
+ 
 }

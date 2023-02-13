@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\asnform;
 use App\Http\Controllers\patientController;
 use Illuminate\Support\Facades\Route;
 
@@ -30,6 +31,6 @@ Route::middleware([
 
     Route::get('/patindex', [patientController::class, 'index'])->name('pat');
     Route::post('patindex/store', [patientController::class, 'store'])->name('pat.store');
-    Route::post('formstore1', [patientController::class, 'storeform'])->name('form1');
+    Route::post('formstore1', [asnform::class, 'storeform'])->name('form1');
 
 });

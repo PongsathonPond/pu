@@ -36,26 +36,29 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        Schema::create('asnForm1', function (Blueprint $table) {
+        Schema::create('asn_form1s', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('patient_id');
-            $table->string('f1');
-            $table->string('f1_2');
-            $table->string('f1_3');
-            $table->string('f2');
-            $table->string('f3');
-            $table->string('f3_2');
-            $table->string('f4');
-            $table->string('f5');
-            $table->string('f6_1');
-            $table->string('f6_2');
-            $table->string('f6_3');
-            $table->string('f6_4');
-            $table->string('f7_1');
-            $table->string('f7_2');
-            $table->string('f7_3');
-            $table->string('f7_4');
-            $table->string('sumtotal');
+            $table->string('f1')->nullable();
+            $table->string('f1_2')->nullable();
+            $table->string('f1_3')->nullable();
+            $table->string('f2')->nullable();
+            $table->string('f3_1')->nullable();
+            $table->string('f3_2')->nullable();
+            $table->string('f3_3')->nullable();
+            $table->string('f4_1')->nullable();
+            $table->string('f4_2')->nullable();
+            $table->string('f5')->nullable();
+            $table->string('f6_1')->nullable();
+            $table->string('f6_2')->nullable();
+            $table->string('f6_3')->nullable();
+            $table->string('f6_4')->nullable();
+            $table->string('f6_5')->nullable();
+            $table->string('f7_1')->nullable();
+            $table->string('f7_2')->nullable();
+            $table->string('f7_3')->nullable();
+            $table->string('f7_4')->nullable();
+            $table->string('sumtotal')->nullable();
             $table->foreign('patient_id')->references('id')->on('patients');
             $table->timestamps();
         });
