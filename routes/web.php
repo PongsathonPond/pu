@@ -31,6 +31,9 @@ Route::middleware([
 
     Route::get('/patindex', [patientController::class, 'index'])->name('pat');
     Route::post('patindex/store', [patientController::class, 'store'])->name('pat.store');
+    Route::get('/patindex/{id}', [asnform::class, 'edit']);
+    Route::get('/patindex2/{id}', [asnform::class, 'edit2']);
     Route::post('formstore1', [asnform::class, 'storeform'])->name('form1');
+    Route::post('formstore2', [asnform::class, 'storeform2'])->name('form2');
 
 });

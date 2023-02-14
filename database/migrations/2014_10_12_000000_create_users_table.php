@@ -63,7 +63,7 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        Schema::create('asnForm2', function (Blueprint $table) {
+        Schema::create('asn_form2s', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('patient_id');
             $table->string('f1');
