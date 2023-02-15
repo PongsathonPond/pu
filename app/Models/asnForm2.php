@@ -22,5 +22,12 @@ class asnForm2 extends Model
         '10',
         'sumtotal',
     ];
+
+    public function asn2topat()
+    {
+
+        return $this->hasMany(patient::class, 'id', 'patient_id');
+
+    }
 }
 

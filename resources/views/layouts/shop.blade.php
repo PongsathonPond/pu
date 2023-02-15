@@ -7,7 +7,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>
-        FORM SYSTEM
+        ระบบประเมินชุมชนและความพร้อมครอบครัวกลุ่มงานสังคมสงเคราะห์ โรงพยาบาลจิตเวชนครราชสีมาราชครินทร์
     </title>
     <!--     Fonts and icons     -->
     <link rel="stylesheet" type="text/css"
@@ -49,6 +49,7 @@
             <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/material-dashboard/pages/dashboard "
                 target="_blank">
                 <span class="ms-1 font-weight-bold text-white">FORM SYSTEM</span>
+
             </a>
         </div>
         <hr class="horizontal light mt-0 mb-2">

@@ -2,6 +2,10 @@
 
 use App\Http\Controllers\asnform;
 use App\Http\Controllers\patientController;
+use App\Models\patient;
+use App\Models\asnForm1;
+use App\Models\asnForm2;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,7 +20,7 @@ use Illuminate\Support\Facades\Route;
  */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Route::middleware([
@@ -26,7 +30,12 @@ Route::middleware([
 ])->group(function () {
 
     Route::get('/dashboard', function () {
-        return view('dashboard');
+        $countpat = patient::all()->count();
+        $countasn1 = asnForm1::all()->count();
+        $countasn2 = asnForm2::all()->count();
+        $countuser = User::all()->count();
+        $ans = asnForm2::all()->where('sumtotal','<=',20);
+        return view('dashboard',compact('countpat','countasn1','countasn2','countuser','ans'));
     })->name('dashboard');
 
     Route::get('/patindex', [patientController::class, 'index'])->name('pat');

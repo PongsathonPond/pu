@@ -7,7 +7,7 @@
         <div class="card">
             <div class="card-header p-3 pt-2">
 
-                <h5>รายการแบบประเมิน 1  ของ {{$pat->name}}</h5>
+                <h5>รายการแบบประเมิน 1  ของ {{$pat->title_pat}} {{$pat->firstname_pat}} {{$pat->lastname_pat}}</h5>
             </div>
             <div class="table-responsive">
                 <table class="table align-items-center mb-0" id="myTable">

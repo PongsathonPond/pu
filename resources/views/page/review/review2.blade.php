@@ -7,19 +7,19 @@
         <div class="card">
             <div class="card-header p-3 pt-2">
 
-                <h5>รายการแบบประเมิน 2  ของผู้ป่วย {{$pat->name}}</h5>
+                <h5>รายการแบบประเมิน 2  ของผู้ป่วย {{$pat->title_pat}} {{$pat->firstname_pat}} {{$pat->lastname_pat}}</h5>
             </div>
             <div class="table-responsive">
                 <table class="table align-items-center mb-0" id="myTable">
                     <thead>
                     <tr>
-                        <th class="text-uppercase text-secondary  text-1xl font-weight-bolder opacity-7">
+                        <th >
                             ลำดับ</th>
                         <th>คะแนนรวม</th>
                         <th>ผลการประเมิน</th>
                         <th>เวลาที่ประเมิน</th>
-                        <th class="text-uppercase text-secondary  text-1xl font-weight-bolder opacity-7  ">
-                            ผลการประเมิน</th>
+                        <th >
+                            รายละเอียดการประเมิน</th>
 
 
                     </tr>
@@ -65,7 +65,7 @@
 
 
                             <td>
-                                <button type="button" class="btn btn-block bg-gradient-warning mb-3" data-bs-toggle="modal" data-bs-target="#modal-default{{$item->id}}" style="margin-left: 5%"><i class="fas fa-eye fa-2xl "></i></button>
+                                <button type="button" class="btn btn-block bg-gradient-warning mb-3" data-bs-toggle="modal" data-bs-target="#modal-default{{$item->id}}" style="margin-left: 20%"><i class="fas fa-eye fa-2xl "></i></button>
                                 <div class="modal fade" id="modal-default{{$item->id}}" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
                                     <div class="modal-dialog modal-lg modal-dialog-centered modal-" role="document">
                                         <div class="modal-content">

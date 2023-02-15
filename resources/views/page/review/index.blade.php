@@ -38,7 +38,9 @@
                                 <div class="d-flex px-2">
                                     <div class="my-auto">
                                         <b>
-                                            {{ $item->name_pat }}
+                                            {{ $item->title_pat }}
+                                            {{ $item->firstname_pat }}
+                                            {{ $item->lastname_pat }}
                                         </b>
 
                                     </div>
@@ -54,7 +56,9 @@
                             </td>
                             <td>
                                 <b>
-                                    {{ $item->name }}
+                                    {{ $item->title }}
+                                    {{ $item->firstname }}
+                                    {{ $item->lastname }}
                                 </b>
 
                             </td>

@@ -27,10 +27,14 @@ return new class extends Migration
 
         Schema::create('patients', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('title');
+            $table->string('firstname');
+            $table->string('lastname');
             $table->string('age');
             $table->string('relevant');
-            $table->string('name_pat');
+            $table->string('title_pat');
+            $table->string('firstname_pat');
+            $table->string('lastname_pat');
             $table->string('age_pat');
             $table->string('hn');
             $table->timestamps();
@@ -66,16 +70,16 @@ return new class extends Migration
         Schema::create('asn_form2s', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('patient_id');
-            $table->string('f1');
-            $table->string('f2');
-            $table->string('f3');
-            $table->string('f4');
-            $table->string('f5');
-            $table->string('f6');
-            $table->string('f7');
-            $table->string('f8');
-            $table->string('f9');
-            $table->string('f10');
+            $table->string('f1')->nullable();
+            $table->string('f2')->nullable();
+            $table->string('f3')->nullable();
+            $table->string('f4')->nullable();
+            $table->string('f5')->nullable();
+            $table->string('f6')->nullable();
+            $table->string('f7')->nullable();
+            $table->string('f8')->nullable();
+            $table->string('f9')->nullable();
+            $table->string('f10')->nullable();
             $table->string('sumtotal');
             $table->foreign('patient_id')->references('id')->on('patients');
             $table->timestamps();

@@ -1,7 +1,7 @@
 @extends('layouts.shop')
 
 @section('content')
-    <div class="col-lg-2">
+    <div class="col-lg-3">
         <div class="card ">
             <div class="card-header pb-0 p-3">
                 <div class="row">
@@ -17,12 +17,33 @@
                     <form id="post-form">
                         @csrf
                         <div class="row">
-
-
                             <div class="input-group input-group-outline my-3">
-                                <input type="text" class="form-control" placeholder="ชื่อนาม-สกุล ผู้ให้ข้อมูล"
-                                    name="name">
+                                <input type="text" class="form-control" placeholder="คำนำหน้า"
+                                       name="title">
                             </div>
+                            @error('title')
+                            <div class="my-2">
+                                <span class="text-danger my-2"> {{ $message }} </span>
+                            </div>
+                            @enderror
+                            <div class="input-group input-group-outline my-3">
+                                <input type="text" class="form-control" placeholder="ชื่อ ผู้ให้ข้อมูล"
+                                       name="firstname">
+                            </div>
+                            @error('firstname')
+                            <div class="my-2">
+                                <span class="text-danger my-2"> {{ $message }} </span>
+                            </div>
+                            @enderror
+                            <div class="input-group input-group-outline my-3">
+                                <input type="text" class="form-control" placeholder="นามสกุล ผู้ให้ข้อมูล"
+                                    name="lastname">
+                            </div>
+                            @error('lastname')
+                            <div class="my-2">
+                                <span class="text-danger my-2"> {{ $message }} </span>
+                            </div>
+                            @enderror
 
                             <div class="input-group input-group-outline mb-1">
 
@@ -32,19 +53,50 @@
                                     <input type="text" class="form-control" placeholder="อายุ" name="age">
                                 </div>
 
-
+                                @error('age')
+                                <div class="my-2">
+                                    <span class="text-danger my-2"> {{ $message }} </span>
+                                </div>
+                                @enderror
                             </div>
                             <div class="col-6">
                                 <div class="input-group input-group-outline my-3">
                                     <input type="text" class="form-control" placeholder="เกี่ยวข้องเป็น" name="relevant">
                                 </div>
-
+                                @error('relevant')
+                                <div class="my-2">
+                                    <span class="text-danger my-2"> {{ $message }} </span>
+                                </div>
+                                @enderror
 
                             </div>
                             <div class="input-group input-group-outline my-3">
-                                <input type="text" class="form-control" placeholder="ชื่อนาม-สกุล ผู้ป่วย"
-                                    name="name_pat">
+                                <input type="text" class="form-control" placeholder="คำนำหน้า ผู้ป่วย"
+                                    name="title_pat">
                             </div>
+                            @error('title_pat')
+                            <div class="my-2">
+                                <span class="text-danger my-2"> {{ $message }} </span>
+                            </div>
+                            @enderror
+                            <div class="input-group input-group-outline my-3">
+                                <input type="text" class="form-control" placeholder="ชื่อนาม ผู้ป่วย"
+                                       name="firstname_pat">
+                            </div>
+                            @error('firstname_pat')
+                            <div class="my-2">
+                                <span class="text-danger my-2"> {{ $message }} </span>
+                            </div>
+                            @enderror
+                            <div class="input-group input-group-outline my-3">
+                                <input type="text" class="form-control" placeholder="นามสกุล ผู้ป่วย"
+                                       name="lastname_pat">
+                            </div>
+                            @error('lastname_pat')
+                            <div class="my-2">
+                                <span class="text-danger my-2"> {{ $message }} </span>
+                            </div>
+                            @enderror
 
                             <div class="input-group input-group-outline mb-1">
 
@@ -53,7 +105,11 @@
                                 <div class="input-group input-group-outline my-3">
                                     <input type="text" class="form-control" placeholder="อายุผู้ป่วย" name="age_pat">
                                 </div>
-
+                                @error('age_pat')
+                                <div class="my-2">
+                                    <span class="text-danger my-2"> {{ $message }} </span>
+                                </div>
+                                @enderror
 
                             </div>
                             <div class="col-6">
@@ -61,7 +117,11 @@
                                     <input type="text" class="form-control" placeholder="hn" name="hn">
                                 </div>
 
-
+                                @error('hn')
+                                <div class="my-2">
+                                    <span class="text-danger my-2"> {{ $message }} </span>
+                                </div>
+                                @enderror
                             </div>
 
                             <button type="input" class="btn btn-success">เพิ่มข้อมูล</button>
@@ -89,7 +149,7 @@
 
     </div>
 
-    <div class="col-lg-10">
+    <div class="col-lg-9">
 
         <div class="card">
             <div class="card-header p-3 pt-2">
@@ -122,11 +182,13 @@
 
                         @foreach ($p as $item)
                             <tr>
-                                <td>
+                                <td style="text-align: center">
                                     <div class="d-flex px-2">
                                         <div class="my-auto">
                                             <b>
-                                                {{ $item->name_pat }}
+                                                {{ $item->title }}
+                                                {{ $item->firstname_pat }}
+                                                {{ $item->lastname_pat }}
                                             </b>
 
                                         </div>
@@ -142,7 +204,10 @@
                                 </td>
                                 <td>
                                     <b>
-                                        {{ $item->name }}
+                                        <b> {{ $item->title }}
+                                            {{ $item->firstname }}
+                                            {{ $item->lastname }}
+                                        </b>
                                     </b>
 
                                 </td>

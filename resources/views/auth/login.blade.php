@@ -1,7 +1,7 @@
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-            <x-jet-authentication-card-logo />
+        <h1 style="text-align: center;font-size: 20px">ระบบประเมินชุมชนและความพร้อมครอบครัวกลุ่มงานสังคมสงเคราะห์ </h1><br> <h1 style="text-align: center;font-size: 20px"> โรงพยาบาลจิตเวชนครราชสีมาราชครินทร์</h1>
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />
