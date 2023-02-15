@@ -7,7 +7,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>
-        POS SYSTEM
+        FORM SYSTEM
     </title>
     <!--     Fonts and icons     -->
     <link rel="stylesheet" type="text/css"
@@ -48,7 +48,7 @@
                 aria-hidden="true" id="iconSidenav"></i>
             <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/material-dashboard/pages/dashboard "
                 target="_blank">
-                <span class="ms-1 font-weight-bold text-white">POS SYSTEM</span>
+                <span class="ms-1 font-weight-bold text-white">FORM SYSTEM</span>
             </a>
         </div>
         <hr class="horizontal light mt-0 mb-2">
@@ -90,7 +90,7 @@
                             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                                 <i class="material-icons opacity-10">table_view</i>
                             </div>
-                            <span class="nav-link-text ms-1 ">ข้อมูลผู้ป่วย</span>
+                            <span class="nav-link-text ms-1 ">เพิ่มข้อมูลผู้ป่วยและประเมิน</span>
                         </a>
                     </li>
                 @else
@@ -99,12 +99,30 @@
                             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                                 <i class="material-icons opacity-10">table_view</i>
                             </div>
-                            <span class="nav-link-text ms-1">ข้อมูลผู้ป่วย</span>
+                            <span class="nav-link-text ms-1">เพิ่มข้อมูลผู้ป่วยและประเมิน</span>
                         </a>
                     </li>
                 @endif
 
-
+                    @if (request()->routeIs('reviewall'))
+                        <li class="nav-item">
+                            <a class="nav-link text-white active bg-gradient-success " href="{{ route('reviewall') }}">
+                                <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                                    <i class="material-icons opacity-10">table_view</i>
+                                </div>
+                                <span class="nav-link-text ms-1 ">แบบฟอร์มที่ประเมินแล้ว</span>
+                            </a>
+                        </li>
+                    @else
+                        <li class="nav-item">
+                            <a class="nav-link text-white " href="{{ route('reviewall') }}">
+                                <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                                    <i class="material-icons opacity-10">table_view</i>
+                                </div>
+                                <span class="nav-link-text ms-1">แบบฟอร์มที่ประเมินแล้ว</span>
+                            </a>
+                        </li>
+                    @endif
 
 
 
@@ -112,9 +130,15 @@
         </div>
         <div class="sidenav-footer position-absolute w-100 bottom-0 ">
             <div class="mx-3">
-                <a class="btn bg-gradient-success mt-4 w-100"
-                    href="https://www.creative-tim.com/product/material-dashboard-pro?ref=sidebarfree"
-                    type="button">Upgrade to pro</a>
+
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <a class=" btn bg-gradient-success mt-4 w-100 " href="{{ route('logout') }}"
+                       onclick="event.preventDefault();
+            this.closest('form').submit();">
+                        ออกจากระบบ
+                    </a>
+                </form>
             </div>
         </div>
     </aside>

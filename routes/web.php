@@ -35,5 +35,7 @@ Route::middleware([
     Route::get('/patindex2/{id}', [asnform::class, 'edit2']);
     Route::post('formstore1', [asnform::class, 'storeform'])->name('form1');
     Route::post('formstore2', [asnform::class, 'storeform2'])->name('form2');
-
+    Route::get('/review', [asnform::class, 'index'])->name('reviewall');
+    Route::get('/review1/{id}', [asnform::class, 'findreview1']);
+    Route::get('/review2/{id}', [asnform::class, 'findreview2']);
 });

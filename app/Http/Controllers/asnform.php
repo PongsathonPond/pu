@@ -8,6 +8,26 @@ use Illuminate\Http\Request;
 
 class asnform extends Controller
 {
+
+    public function index(){
+
+        $p = patient::all();
+        return view('page.review.index',compact('p'));
+    }
+
+
+    public function findreview1($id){
+        $asn = asnForm1::where('patient_id',$id)->get();
+        $pat = patient::find($id);
+        return view('page.review.review1',compact('asn','pat'));
+    }
+    public function findreview2($id){
+        $asn = asnForm2::where('patient_id',$id)->get();
+        $pat = patient::find($id);
+        return view('page.review.review2',compact('asn','pat'));
+    }
+
+
     public function edit($id)
     {
         $pat = patient::find($id);
@@ -66,7 +86,7 @@ class asnform extends Controller
        $sumf10 = $request->f10_0+$request->f10_1+$request->f10_2+$request->f10_3+$request->f10_4+$request->f10_5;;
 
 
-       $sumall = $sumf3+$sumf2+$sumf4+$sumf5+$sumf6+$sumf7+$sumf8+$sumf9+$sumf10+$request->f1;
+       $sumall = $sumf3+$sumf2+$sumf4+$sumf5+$sumf6+$sumf7+$sumf8+$sumf9+$sumf10;
         $tableName = new asnForm2();
         $tableName->f1 = $request->f1;
         $tableName->f2 = $sumf2;

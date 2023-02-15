@@ -10,6 +10,8 @@
                     <div class="col-6 d-flex align-items-center">
                         <h3 class="mb-0">แบบประเมิน 2</h3>
                     </div>
+                    <br><br><br>
+                    <h6 class="mb-0"> ชื่อผู่ป่วย : {{$pat->name}} &nbsp;  อายุ : {{$pat->age}}</h6>
                 </div>
             </div>
             <div class="card-body p-3 pb-0">

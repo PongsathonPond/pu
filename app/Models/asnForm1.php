@@ -32,4 +32,11 @@ class asnForm1 extends Model
         'sumtotal',
     ];
 
+    public function asn1topat()
+    {
+
+        return $this->hasMany(patient::class, 'id', 'patient_id');
+
+    }
+
 }
