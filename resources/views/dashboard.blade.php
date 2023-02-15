@@ -100,7 +100,9 @@
                                 <tr>
                                     <td style="text-align: center">
                                         @foreach($item->asn2topat as $item1)
-                                            {{$item1->name}}
+                                            {{ $item1->title_pat }}
+                                            {{ $item1->firstname_pat }}
+                                            {{ $item1->lastname_pat }}
                                         @endforeach
 
                                     </td>
