@@ -63,7 +63,7 @@ return new class extends Migration
             $table->string('f7_3')->nullable();
             $table->string('f7_4')->nullable();
             $table->string('sumtotal')->nullable();
-            $table->foreign('patient_id')->references('id')->on('patients');
+            $table->foreign('patient_id')->references('id')->on('patients')->onDelete('cascade');
             $table->timestamps();
         });
 
@@ -81,7 +81,7 @@ return new class extends Migration
             $table->string('f9')->nullable();
             $table->string('f10')->nullable();
             $table->string('sumtotal');
-            $table->foreign('patient_id')->references('id')->on('patients');
+            $table->foreign('patient_id')->references('id')->on('patients')->onDelete('cascade');;
             $table->timestamps();
         });
 

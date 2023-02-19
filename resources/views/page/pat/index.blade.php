@@ -17,112 +17,130 @@
                     <form id="post-form">
                         @csrf
                         <div class="row">
-                            <div class="input-group input-group-outline my-3">
-                                <input type="text" class="form-control" placeholder="คำนำหน้า"
-                                       name="title">
-                            </div>
-                            @error('title')
-                            <div class="my-2">
-                                <span class="text-danger my-2"> {{ $message }} </span>
-                            </div>
-                            @enderror
-                            <div class="input-group input-group-outline my-3">
-                                <input type="text" class="form-control" placeholder="ชื่อ ผู้ให้ข้อมูล"
-                                       name="firstname">
-                            </div>
-                            @error('firstname')
-                            <div class="my-2">
-                                <span class="text-danger my-2"> {{ $message }} </span>
-                            </div>
-                            @enderror
-                            <div class="input-group input-group-outline my-3">
-                                <input type="text" class="form-control" placeholder="นามสกุล ผู้ให้ข้อมูล"
-                                    name="lastname">
-                            </div>
-                            @error('lastname')
-                            <div class="my-2">
-                                <span class="text-danger my-2"> {{ $message }} </span>
-                            </div>
-                            @enderror
-
-                            <div class="input-group input-group-outline mb-1">
-
-                            </div>
-                            <div class="col-6">
-                                <div class="input-group input-group-outline my-3">
-                                    <input type="text" class="form-control" placeholder="อายุ" name="age">
+                            <div class="col-4">
+                                <div class="input-group input-group-static mb-4">
+                                    <label><b>คำนำหน้า</b></label>
+                                    <input type="text" class="form-control" name="title">
                                 </div>
-
-                                @error('age')
-                                <div class="my-2">
-                                    <span class="text-danger my-2"> {{ $message }} </span>
-                                </div>
+                                @error('title')
+                                    <div class="my-2">
+                                        <span class="text-danger my-2"> {{ $message }} </span>
+                                    </div>
                                 @enderror
                             </div>
+
+                            <div class="col-4">
+                                <div class="input-group input-group-static mb-4">
+                                    <label><b>ชื่อผู้ให้ข้อมูล</b></label>
+                                    <input type="text" class="form-control" name="firstname">
+                                </div>
+                                @error('firstname')
+                                    <div class="my-2">
+                                        <span class="text-danger my-2"> {{ $message }} </span>
+                                    </div>
+                                @enderror
+                            </div>
+
+
+                            <div class="col-4">
+                                <div class="input-group input-group-static mb-4">
+                                    <label><b>นามสกุล </b></label>
+                                    <input type="text" class="form-control" name="lastname">
+                                </div>
+                                @error('lastname')
+                                    <div class="my-2">
+                                        <span class="text-danger my-2"> {{ $message }} </span>
+                                    </div>
+                                @enderror
+                            </div>
+
+
                             <div class="col-6">
-                                <div class="input-group input-group-outline my-3">
-                                    <input type="text" class="form-control" placeholder="เกี่ยวข้องเป็น" name="relevant">
+                                <div class="input-group input-group-static mb-4">
+                                    <label><b>อายุ </b></label>
+                                    <input type="text" class="form-control" name="age">
+                                </div>
+                                @error('age')
+                                    <div class="my-2">
+                                        <span class="text-danger my-2"> {{ $message }} </span>
+                                    </div>
+                                @enderror
+                            </div>
+
+                            <div class="col-6">
+                                <div class="input-group input-group-static mb-4">
+                                    <label><b>เกี่ยวข้องเป็น </b></label>
+                                    <input type="text" class="form-control" name="relevant">
                                 </div>
                                 @error('relevant')
-                                <div class="my-2">
-                                    <span class="text-danger my-2"> {{ $message }} </span>
-                                </div>
+                                    <div class="my-2">
+                                        <span class="text-danger my-2"> {{ $message }} </span>
+                                    </div>
                                 @enderror
+                            </div>
 
+                            <div class="col-4">
+                                <div class="input-group input-group-static mb-4">
+                                    <label><b>คำนำหน้าผู้ป่วย</b></label>
+                                    <input type="text" class="form-control" name="title_pat">
+                                </div>
+                                @error('title_pat')
+                                    <div class="my-2">
+                                        <span class="text-danger my-2"> {{ $message }} </span>
+                                    </div>
+                                @enderror
                             </div>
-                            <div class="input-group input-group-outline my-3">
-                                <input type="text" class="form-control" placeholder="คำนำหน้า ผู้ป่วย"
-                                    name="title_pat">
-                            </div>
-                            @error('title_pat')
-                            <div class="my-2">
-                                <span class="text-danger my-2"> {{ $message }} </span>
-                            </div>
-                            @enderror
-                            <div class="input-group input-group-outline my-3">
-                                <input type="text" class="form-control" placeholder="ชื่อนาม ผู้ป่วย"
-                                       name="firstname_pat">
-                            </div>
-                            @error('firstname_pat')
-                            <div class="my-2">
-                                <span class="text-danger my-2"> {{ $message }} </span>
-                            </div>
-                            @enderror
-                            <div class="input-group input-group-outline my-3">
-                                <input type="text" class="form-control" placeholder="นามสกุล ผู้ป่วย"
-                                       name="lastname_pat">
-                            </div>
-                            @error('lastname_pat')
-                            <div class="my-2">
-                                <span class="text-danger my-2"> {{ $message }} </span>
-                            </div>
-                            @enderror
 
-                            <div class="input-group input-group-outline mb-1">
-
+                            <div class="col-4">
+                                <div class="input-group input-group-static mb-4">
+                                    <label><b>ชื่อผู้ป่วย</b></label>
+                                    <input type="text" class="form-control" name="firstname_pat">
+                                </div>
+                                @error('firstname_pat')
+                                    <div class="my-2">
+                                        <span class="text-danger my-2"> {{ $message }} </span>
+                                    </div>
+                                @enderror
                             </div>
+
+                            <div class="col-4">
+                                <div class="input-group input-group-static mb-4">
+                                    <label><b>นามสกุล</b></label>
+                                    <input type="text" class="form-control" name="lastname_pat">
+                                </div>
+                                @error('lastname_pat')
+                                    <div class="my-2">
+                                        <span class="text-danger my-2"> {{ $message }} </span>
+                                    </div>
+                                @enderror
+                            </div>
+
+
                             <div class="col-6">
-                                <div class="input-group input-group-outline my-3">
-                                    <input type="text" class="form-control" placeholder="อายุผู้ป่วย" name="age_pat">
+                                <div class="input-group input-group-static mb-4">
+                                    <label><b>อายุผู้ป่วย</b></label>
+                                    <input type="text" class="form-control" name="age_pat">
                                 </div>
                                 @error('age_pat')
-                                <div class="my-2">
-                                    <span class="text-danger my-2"> {{ $message }} </span>
-                                </div>
+                                    <div class="my-2">
+                                        <span class="text-danger my-2"> {{ $message }} </span>
+                                    </div>
                                 @enderror
-
                             </div>
+
                             <div class="col-6">
-                                <div class="input-group input-group-outline my-3">
-                                    <input type="text" class="form-control" placeholder="hn" name="hn">
+                                <div class="input-group input-group-static mb-4">
+                                    <label><b>hn</b></label>
+                                    <input type="text" class="form-control" name="hn">
                                 </div>
-
                                 @error('hn')
-                                <div class="my-2">
-                                    <span class="text-danger my-2"> {{ $message }} </span>
-                                </div>
+                                    <div class="my-2">
+                                        <span class="text-danger my-2"> {{ $message }} </span>
+                                    </div>
                                 @enderror
                             </div>
+
+
 
                             <button type="input" class="btn btn-success">เพิ่มข้อมูล</button>
 
@@ -146,6 +164,19 @@
                 <strong>สำเร็จ !</strong> เพิ่มข้อมูลในฟอร์ม 1 เรียบร้อย
             </div>
         @endif
+        @if (session('update'))
+            <div class="alert alert-success" role="alert">
+                <strong>สำเร็จ !</strong> อัพเดทข้อมูลเรียบร้อย
+            </div>
+        @endif
+
+        @if (session('delete'))
+            <div class="alert alert-danger" role="alert">
+                <strong>สำเร็จ !</strong> ลบข้อมูลเรียบร้อย
+            </div>
+        @endif
+
+
 
     </div>
 
@@ -172,7 +203,7 @@
                             <th class="text-uppercase text-secondary  text-1xl font-weight-bolder opacity-7  ">
                                 แบบประเมิน</th>
                             <th class="text-uppercase text-secondary  text-1xl font-weight-bolder opacity-7 ps-2">
-                                แก้ไขข้อมูล</th>
+                                แก้ไขข้อมูล/ลบ</th>
 
                         </tr>
                     </thead>
@@ -218,22 +249,29 @@
 
                                 </td>
                                 <td class="align-middle">
-                                    <a href="{{ url('/patindex/' . $item->id) }}"  class="btn btn-danger btn-sm bg-gradient-danger mb-3 "> ฟอร์ม1</a>
-                                    <a href="{{ url('/patindex2/' . $item->id) }}"  class="btn btn-danger btn-sm bg-gradient-danger mb-3 "> ฟอร์ม2</a>
+                                    <a href="{{ url('/patindex/' . $item->id) }}"
+                                        class="btn btn-danger btn-sm bg-gradient-danger mb-3 "> ฟอร์ม1</a>
+                                    <a href="{{ url('/patindex2/' . $item->id) }}"
+                                        class="btn btn-danger btn-sm bg-gradient-danger mb-3 "> ฟอร์ม2</a>
 
 
                                 <td class="align-middle">
                                     <button type="button" class="btn btn-secondary btn-sm bg-gradient-secondary mb-3  "
-                                        data-bs-toggle="modal" data-bs-target="#modal-default"> <i
+                                        data-bs-toggle="modal" data-bs-target="#modal-default{{ $item->id }}"> <i
                                             class="far fa-edit"></i></button>
 
-                                    <div class="modal fade" id="modal-default" tabindex="-1" role="dialog"
-                                        aria-labelledby="modal-default" aria-hidden="true">
+
+                                    <a href="{{ url('/patindex/delete/' . $item->id) }}"
+                                        class="btn btn-secondary btn-sm bg-gradient-secondary mb-3"
+                                        onclick="return confirm('ลบหรือไม่ ?')"> <i class="fas fa-trash"></i></a>
+
+                                    <div class="modal fade" id="modal-default{{ $item->id }}" tabindex="-1"
+                                        role="dialog" aria-labelledby="modal-default" aria-hidden="true">
                                         <div class="modal-dialog modal- modal-dialog-centered modal-" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">
                                                     <h6 class="modal-title font-weight-normal" id="modal-title-default">
-                                                        <b>จัดการสินค้า</b>
+                                                        <b>แก้ไขข้อมูลผู้ป่วย</b>
                                                     </h6>
                                                     <button type="button" class="btn-close text-dark"
                                                         data-bs-dismiss="modal" aria-label="Close">
@@ -242,45 +280,177 @@
                                                 </div>
                                                 <div class="modal-body">
                                                     <div class="p-4">
-                                                        <form>
+                                                        <form action="{{ url('/patindex-update/' . $item->id) }}"
+                                                            method="post" enctype="multipart/form-data">
+                                                            @csrf
 
                                                             <div class="row">
-
-                                                                <div class="col-12">
+                                                                <div class="col-4">
                                                                     <div class="input-group input-group-static mb-4">
-                                                                        <label><b>ชื่อสินค้า</b></label>
-                                                                        <input type="text" class="form-control">
+                                                                        <label><b>คำนำหน้า</b></label>
+                                                                        <input type="text" class="form-control"
+                                                                            name="title" style="font-weight: bold"
+                                                                            value={{ $item->title }}>
                                                                     </div>
-                                                                </div>
-                                                                <div class="col-6">
-                                                                    <div class="input-group input-group-static mb-4">
-                                                                        <label><b>ราคาปลีก</b></label>
-                                                                        <input type="text" class="form-control">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-6">
-                                                                    <div class="input-group input-group-static mb-4">
-                                                                        <label><b>ราคาส่ง</b></label>
-                                                                        <input type="text" class="form-control">
-                                                                    </div>
+                                                                    @error('title')
+                                                                        <div class="my-2">
+                                                                            <span class="text-danger my-2">
+                                                                                {{ $message }} </span>
+                                                                        </div>
+                                                                    @enderror
                                                                 </div>
 
-                                                                <div class="col-12">
+                                                                <div class="col-4">
                                                                     <div class="input-group input-group-static mb-4">
-                                                                        <label><b>จำนวน</b></label>
-                                                                        <input type="text" class="form-control">
+                                                                        <label><b>ชื่อผู้ให้ข้อมูล</b></label>
+                                                                        <input type="text" class="form-control"
+                                                                            name="firstname" style="font-weight: bold"
+                                                                            value={{ $item->firstname }}>
                                                                     </div>
+                                                                    @error('firstname')
+                                                                        <div class="my-2">
+                                                                            <span class="text-danger my-2">
+                                                                                {{ $message }} </span>
+                                                                        </div>
+                                                                    @enderror
                                                                 </div>
+
+
+                                                                <div class="col-4">
+                                                                    <div class="input-group input-group-static mb-4">
+                                                                        <label><b>นามสกุล </b></label>
+                                                                        <input type="text" class="form-control"
+                                                                            name="lastname" style="font-weight: bold"
+                                                                            value={{ $item->lastname }}>
+                                                                    </div>
+                                                                    @error('lastname')
+                                                                        <div class="my-2">
+                                                                            <span class="text-danger my-2">
+                                                                                {{ $message }} </span>
+                                                                        </div>
+                                                                    @enderror
+                                                                </div>
+
+
+                                                                <div class="col-6">
+                                                                    <div class="input-group input-group-static mb-4">
+                                                                        <label><b>อายุ </b></label>
+                                                                        <input type="text" class="form-control"
+                                                                            name="age" style="font-weight: bold"
+                                                                            value={{ $item->age }}>
+                                                                    </div>
+                                                                    @error('age')
+                                                                        <div class="my-2">
+                                                                            <span class="text-danger my-2">
+                                                                                {{ $message }} </span>
+                                                                        </div>
+                                                                    @enderror
+                                                                </div>
+
+                                                                <div class="col-6">
+                                                                    <div class="input-group input-group-static mb-4">
+                                                                        <label><b>เกี่ยวข้องเป็น </b></label>
+                                                                        <input type="text" class="form-control"
+                                                                            name="relevant" style="font-weight: bold"
+                                                                            value={{ $item->relevant }}>
+                                                                    </div>
+                                                                    @error('relevant')
+                                                                        <div class="my-2">
+                                                                            <span class="text-danger my-2">
+                                                                                {{ $message }} </span>
+                                                                        </div>
+                                                                    @enderror
+                                                                </div>
+
+                                                                <div class="col-4">
+                                                                    <div class="input-group input-group-static mb-4">
+                                                                        <label><b>คำนำหน้าผู้ป่วย</b></label>
+                                                                        <input type="text" class="form-control"
+                                                                            name="title_pat" style="font-weight: bold"
+                                                                            value={{ $item->title_pat }}>
+                                                                    </div>
+                                                                    @error('title_pat')
+                                                                        <div class="my-2">
+                                                                            <span class="text-danger my-2">
+                                                                                {{ $message }} </span>
+                                                                        </div>
+                                                                    @enderror
+                                                                </div>
+
+                                                                <div class="col-4">
+                                                                    <div class="input-group input-group-static mb-4">
+                                                                        <label><b>ชื่อผู้ป่วย</b></label>
+                                                                        <input type="text" class="form-control"
+                                                                            name="firstname_pat" style="font-weight: bold"
+                                                                            value={{ $item->firstname_pat }}>
+                                                                    </div>
+                                                                    @error('firstname_pat')
+                                                                        <div class="my-2">
+                                                                            <span class="text-danger my-2">
+                                                                                {{ $message }} </span>
+                                                                        </div>
+                                                                    @enderror
+                                                                </div>
+
+                                                                <div class="col-4">
+                                                                    <div class="input-group input-group-static mb-4">
+                                                                        <label><b>นามสกุล</b></label>
+                                                                        <input type="text" class="form-control"
+                                                                            name="lastname_pat" style="font-weight: bold"
+                                                                            value={{ $item->lastname_pat }}>
+                                                                    </div>
+                                                                    @error('lastname_pat')
+                                                                        <div class="my-2">
+                                                                            <span class="text-danger my-2">
+                                                                                {{ $message }} </span>
+                                                                        </div>
+                                                                    @enderror
+                                                                </div>
+
+
+                                                                <div class="col-6">
+                                                                    <div class="input-group input-group-static mb-4">
+                                                                        <label><b>อายุผู้ป่วย</b></label>
+                                                                        <input type="text" class="form-control"
+                                                                            name="age_pat" style="font-weight: bold"
+                                                                            value={{ $item->age_pat }}>
+                                                                    </div>
+                                                                    @error('age_pat')
+                                                                        <div class="my-2">
+                                                                            <span class="text-danger my-2">
+                                                                                {{ $message }} </span>
+                                                                        </div>
+                                                                    @enderror
+                                                                </div>
+
+                                                                <div class="col-6">
+                                                                    <div class="input-group input-group-static mb-4">
+                                                                        <label><b>hn</b></label>
+                                                                        <input type="text" class="form-control"
+                                                                            style="font-weight: bold" name="hn"
+                                                                            value={{ $item->hn }}>
+                                                                    </div>
+                                                                    @error('hn')
+                                                                        <div class="my-2">
+                                                                            <span class="text-danger my-2">
+                                                                                {{ $message }} </span>
+                                                                        </div>
+                                                                    @enderror
+                                                                </div>
+
+
+
+                                                                <button type="input"
+                                                                    class="btn btn-success">บันทึก</button>
+
+
                                                             </div>
 
                                                         </form>
                                                     </div>
                                                 </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn bg-gradient-success">บันทึก</button>
-                                                    <button type="button" class="btn btn-link  ml-auto"
-                                                        data-bs-dismiss="modal">ปิด</button>
-                                                </div>
+
+
                                             </div>
                                         </div>
                                     </div>

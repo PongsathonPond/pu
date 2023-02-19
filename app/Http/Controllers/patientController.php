@@ -59,5 +59,34 @@ class patientController extends Controller
         return redirect()->route('pat')->with('success', "บันทึกข้อมูลเรียบร้อย");
     }
 
+    public function update(Request $request, $id)
+    {
 
+        patient::find($id)->update([
+
+            'title' => $request->title,
+            'firstname' => $request->firstname,
+            'lastname' => $request->lastname,
+            'age' => $request->age,
+            'relevant' => $request->relevant,
+            'title_pat' => $request->title_pat,
+            'firstname_pat' => $request->firstname_pat,
+            'lastname_pat' => $request->lastname_pat,
+            'age_pat' => $request->age_pat,
+            'hn' => $request->hn,
+
+        ]);
+
+        return redirect()->back()->with('update', "อัพเดตข้อมูลเรียบร้อย");
+        // return redirect()->route('usermanager')->with('success',"อัพเดตข้อมูลเรียบร้อย");
+    }
+
+    public function delete($id)
+    {
+
+        //ลบข้อมูล
+        $delete = patient::find($id)->delete();
+        return redirect()->back()->with('delete', "ลบเรียบร้อยแล้ว");
+        // return redirect()->route('staff_add');
+    }
 }
