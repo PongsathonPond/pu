@@ -1,7 +1,6 @@
 @extends('layouts.shop')
 
 @section('content')
-  
     <div class="col-lg-3">
         <div class="card ">
             <div class="card-header pb-0 p-3">
@@ -194,19 +193,26 @@
                 <table class="table align-items-center mb-0" id="myTable">
                     <thead>
                         <tr>
-                            <th class="text-uppercase text-secondary  text-1xl font-weight-bolder opacity-7">ชื่อ นาม-สกุล
-                                ผู้ป่วย</th>
-                            <th class="text-uppercase text-secondary  text-1xl font-weight-bolder opacity-7 ps-2">อายุ
+                            <th class="text-uppercase text-secondary  text-3xl font-weight-bolder opacity-7">ชื่อ นาม-สกุล
+                                <b>ผู้ป่วย</b>
                             </th>
-                            <th class="text-uppercase text-secondary  text-1xl font-weight-bolder opacity-7 ps-2">hn
+                            <th class="text-uppercase text-secondary  text-3xl font-weight-bolder opacity-7 ps-2">
+                                <b>อายุ</b>
                             </th>
-                            <th class="text-uppercase text-secondary  text-1xl font-weight-bolder opacity-7 ps-2">
-                                ชื่อผู้ให้ข้อมูล</th>
-                            <th>เวลาที่เพิ่ม</th>
-                            <th class="text-uppercase text-secondary  text-1xl font-weight-bolder opacity-7  ">
-                                แบบประเมิน</th>
-                            <th class="text-uppercase text-secondary  text-1xl font-weight-bolder opacity-7 ps-2">
-                                แก้ไขข้อมูล/ลบ</th>
+                            <th class="text-uppercase text-secondary  text-3xl font-weight-bolder opacity-7 ps-2">
+                                <b>hn</b>
+                            </th>
+                            <th class="text-uppercase text-secondary  text-3xl font-weight-bolder opacity-7 ps-2">
+                                <b>ชื่อผู้ให้ข้อมูล</b>
+                            </th>
+                            <th class="text-uppercase text-secondary  text-3xl font-weight-bolder opacity-7 ps-2">
+                                <b>เวลาที่เพิ่ม</b></th>
+                            <th class="text-uppercase text-secondary  text-3xl font-weight-bolder opacity-7  ">
+                                <b>แบบประเมิน</b>
+                            </th>
+                            <th class="text-uppercase text-secondary  text-3xl font-weight-bolder opacity-7 ps-2">
+                                <b>แก้ไขข้อมูล/ลบ</b>
+                            </th>
 
                         </tr>
                     </thead>
