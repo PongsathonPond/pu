@@ -1,7 +1,7 @@
 @extends('layouts.shop')
 
 @section('content')
-    <h1> TESTTESTTESTTESTTESTTESTTESTTEST</h1>
+  
     <div class="col-lg-3">
         <div class="card ">
             <div class="card-header pb-0 p-3">
@@ -21,7 +21,7 @@
                             <div class="col-4">
                                 <div class="input-group input-group-static mb-4">
                                     <label><b>คำนำหน้า</b></label>
-                                    <input type="text" class="form-control" name="title">
+                                    <input type="text" class="form-control" name="title" style="font-weight: bold">
                                 </div>
                                 @error('title')
                                     <div class="my-2">
@@ -33,7 +33,7 @@
                             <div class="col-4">
                                 <div class="input-group input-group-static mb-4">
                                     <label><b>ชื่อผู้ให้ข้อมูล</b></label>
-                                    <input type="text" class="form-control" name="firstname">
+                                    <input type="text" class="form-control" name="firstname" style="font-weight: bold">
                                 </div>
                                 @error('firstname')
                                     <div class="my-2">
@@ -46,7 +46,7 @@
                             <div class="col-4">
                                 <div class="input-group input-group-static mb-4">
                                     <label><b>นามสกุล </b></label>
-                                    <input type="text" class="form-control" name="lastname">
+                                    <input type="text" class="form-control" name="lastname" style="font-weight: bold">
                                 </div>
                                 @error('lastname')
                                     <div class="my-2">
@@ -59,7 +59,7 @@
                             <div class="col-6">
                                 <div class="input-group input-group-static mb-4">
                                     <label><b>อายุ </b></label>
-                                    <input type="text" class="form-control" name="age">
+                                    <input type="text" class="form-control" name="age" style="font-weight: bold">
                                 </div>
                                 @error('age')
                                     <div class="my-2">
@@ -71,7 +71,7 @@
                             <div class="col-6">
                                 <div class="input-group input-group-static mb-4">
                                     <label><b>เกี่ยวข้องเป็น </b></label>
-                                    <input type="text" class="form-control" name="relevant">
+                                    <input type="text" class="form-control" name="relevant" style="font-weight: bold">
                                 </div>
                                 @error('relevant')
                                     <div class="my-2">
@@ -83,7 +83,7 @@
                             <div class="col-4">
                                 <div class="input-group input-group-static mb-4">
                                     <label><b>คำนำหน้าผู้ป่วย</b></label>
-                                    <input type="text" class="form-control" name="title_pat">
+                                    <input type="text" class="form-control" name="title_pat" style="font-weight: bold">
                                 </div>
                                 @error('title_pat')
                                     <div class="my-2">
@@ -95,7 +95,8 @@
                             <div class="col-4">
                                 <div class="input-group input-group-static mb-4">
                                     <label><b>ชื่อผู้ป่วย</b></label>
-                                    <input type="text" class="form-control" name="firstname_pat">
+                                    <input type="text" class="form-control" name="firstname_pat"
+                                        style="font-weight: bold">
                                 </div>
                                 @error('firstname_pat')
                                     <div class="my-2">
@@ -107,7 +108,8 @@
                             <div class="col-4">
                                 <div class="input-group input-group-static mb-4">
                                     <label><b>นามสกุล</b></label>
-                                    <input type="text" class="form-control" name="lastname_pat">
+                                    <input type="text" class="form-control" name="lastname_pat"
+                                        style="font-weight: bold">
                                 </div>
                                 @error('lastname_pat')
                                     <div class="my-2">
@@ -120,7 +122,7 @@
                             <div class="col-6">
                                 <div class="input-group input-group-static mb-4">
                                     <label><b>อายุผู้ป่วย</b></label>
-                                    <input type="text" class="form-control" name="age_pat">
+                                    <input type="text" class="form-control" name="age_pat" style="font-weight: bold">
                                 </div>
                                 @error('age_pat')
                                     <div class="my-2">
@@ -132,7 +134,7 @@
                             <div class="col-6">
                                 <div class="input-group input-group-static mb-4">
                                     <label><b>hn</b></label>
-                                    <input type="text" class="form-control" name="hn">
+                                    <input type="text" class="form-control" name="hn" style="font-weight: bold">
                                 </div>
                                 @error('hn')
                                     <div class="my-2">
