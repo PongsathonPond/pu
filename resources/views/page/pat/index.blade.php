@@ -1,6 +1,7 @@
 @extends('layouts.shop')
 
 @section('content')
+    <h1> TESTTESTTESTTESTTESTTESTTESTTEST</h1>
     <div class="col-lg-3">
         <div class="card ">
             <div class="card-header pb-0 p-3">
