@@ -18,7 +18,9 @@
                         <th>เวลาที่ประเมิน</th>
                         <th class="text-uppercase text-secondary  text-1xl font-weight-bolder opacity-7  ">
                             ผลการประเมิน</th>
-
+                        <th class="text-uppercase text-secondary  text-1xl font-weight-bolder opacity-7  ">
+                                ชื่อผู้เพิ่มข้อมูล</th>
+                                  
 
                     </tr>
                     </thead>
@@ -460,6 +462,11 @@
                                         </div>
                                     </div>
                                 </div>
+
+                            </td>
+
+                            <td>
+                                <span class="badge badge-pill badge-lg bg-gradient-success">{{ $item->auth }}</span>
 
                             </td>
                         </tr>

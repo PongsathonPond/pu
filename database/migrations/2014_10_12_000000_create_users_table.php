@@ -31,12 +31,14 @@ return new class extends Migration
             $table->string('firstname');
             $table->string('lastname');
             $table->string('age');
+            $table->string('address');
             $table->string('relevant');
             $table->string('title_pat');
             $table->string('firstname_pat');
             $table->string('lastname_pat');
             $table->string('age_pat');
             $table->string('hn');
+            $table->string('auth');
             $table->timestamps();
         });
 
@@ -62,6 +64,7 @@ return new class extends Migration
             $table->string('f7_2')->nullable();
             $table->string('f7_3')->nullable();
             $table->string('f7_4')->nullable();
+            $table->string('auth');
             $table->string('sumtotal')->nullable();
             $table->foreign('patient_id')->references('id')->on('patients')->onDelete('cascade');
             $table->timestamps();
@@ -81,6 +84,7 @@ return new class extends Migration
             $table->string('f9')->nullable();
             $table->string('f10')->nullable();
             $table->string('sumtotal');
+            $table->string('auth');
             $table->foreign('patient_id')->references('id')->on('patients')->onDelete('cascade');;
             $table->timestamps();
         });

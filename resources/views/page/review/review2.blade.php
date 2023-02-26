@@ -20,7 +20,8 @@
                         <th>เวลาที่ประเมิน</th>
                         <th >
                             รายละเอียดการประเมิน</th>
-
+                            <th >
+                                ชื่อผู้เพิ่มข้อมูล</th>
 
                     </tr>
                     </thead>
@@ -509,6 +510,11 @@
                                         </div>
                                     </div>
                                 </div>
+
+                            </td>
+
+                            <td>
+                                <span class="badge badge-pill badge-lg bg-gradient-success">{{ $item->auth }}</span>
 
                             </td>
                         </tr>

@@ -20,5 +20,6 @@ class patient extends Model
         'lastname_pat',
         'age_pat',
         'hn',
+      
     ];
 }

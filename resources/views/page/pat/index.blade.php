@@ -19,7 +19,7 @@
                         <div class="row">
                             <div class="col-4">
                                 <div class="input-group input-group-static mb-4">
-                                    <label><b>คำนำหน้า</b></label>
+                                    <label style="color:black"><b>คำนำหน้า</b></label>
                                     <input type="text" class="form-control" name="title" style="font-weight: bold">
                                 </div>
                                 @error('title')
@@ -31,7 +31,7 @@
 
                             <div class="col-4">
                                 <div class="input-group input-group-static mb-4">
-                                    <label><b>ชื่อผู้ให้ข้อมูล</b></label>
+                                    <label style="color:black"><b>ชื่อผู้ให้ข้อมูล</b></label>
                                     <input type="text" class="form-control" name="firstname" style="font-weight: bold">
                                 </div>
                                 @error('firstname')
@@ -44,7 +44,7 @@
 
                             <div class="col-4">
                                 <div class="input-group input-group-static mb-4">
-                                    <label><b>นามสกุล </b></label>
+                                    <label style="color:black"><b>นามสกุล </b></label>
                                     <input type="text" class="form-control" name="lastname" style="font-weight: bold">
                                 </div>
                                 @error('lastname')
@@ -57,7 +57,7 @@
 
                             <div class="col-6">
                                 <div class="input-group input-group-static mb-4">
-                                    <label><b>อายุ </b></label>
+                                    <label style="color:black"><b>อายุ </b></label>
                                     <input type="text" class="form-control" name="age" style="font-weight: bold">
                                 </div>
                                 @error('age')
@@ -69,7 +69,7 @@
 
                             <div class="col-6">
                                 <div class="input-group input-group-static mb-4">
-                                    <label><b>เกี่ยวข้องเป็น </b></label>
+                                    <label style="color:black"><b>เกี่ยวข้องเป็น </b></label>
                                     <input type="text" class="form-control" name="relevant" style="font-weight: bold">
                                 </div>
                                 @error('relevant')
@@ -81,7 +81,7 @@
 
                             <div class="col-4">
                                 <div class="input-group input-group-static mb-4">
-                                    <label><b>คำนำหน้าผู้ป่วย</b></label>
+                                    <label style="color:black"><b>คำนำหน้าผู้ป่วย</b></label>
                                     <input type="text" class="form-control" name="title_pat" style="font-weight: bold">
                                 </div>
                                 @error('title_pat')
@@ -93,7 +93,7 @@
 
                             <div class="col-4">
                                 <div class="input-group input-group-static mb-4">
-                                    <label><b>ชื่อผู้ป่วย</b></label>
+                                    <label style="color:black"><b>ชื่อผู้ป่วย</b></label>
                                     <input type="text" class="form-control" name="firstname_pat"
                                         style="font-weight: bold">
                                 </div>
@@ -106,7 +106,7 @@
 
                             <div class="col-4">
                                 <div class="input-group input-group-static mb-4">
-                                    <label><b>นามสกุล</b></label>
+                                    <label style="color:black"><b>นามสกุล</b></label>
                                     <input type="text" class="form-control" name="lastname_pat"
                                         style="font-weight: bold">
                                 </div>
@@ -120,7 +120,7 @@
 
                             <div class="col-6">
                                 <div class="input-group input-group-static mb-4">
-                                    <label><b>อายุผู้ป่วย</b></label>
+                                    <label style="color:black"><b>อายุผู้ป่วย</b></label>
                                     <input type="text" class="form-control" name="age_pat" style="font-weight: bold">
                                 </div>
                                 @error('age_pat')
@@ -132,7 +132,7 @@
 
                             <div class="col-6">
                                 <div class="input-group input-group-static mb-4">
-                                    <label><b>hn</b></label>
+                                    <label style="color:black"><b>hn</b></label>
                                     <input type="text" class="form-control" name="hn" style="font-weight: bold">
                                 </div>
                                 @error('hn')
@@ -141,6 +141,20 @@
                                     </div>
                                 @enderror
                             </div>
+
+                            <div class="col-12">
+                                <div class="input-group input-group-static mb-4">
+                                    <label style="color:black"><b>ที่อยู่</b></label>
+                                    <input type="text" class="form-control" name="address" style="font-weight: bold">
+                                </div>
+                                @error('address')
+                                    <div class="my-2">
+                                        <span class="text-danger my-2"> {{ $message }} </span>
+                                    </div>
+                                @enderror
+                            </div>
+
+
 
 
 
@@ -193,25 +207,25 @@
                 <table class="table align-items-center mb-0" id="myTable">
                     <thead>
                         <tr>
-                            <th class="text-uppercase text-secondary  text-3xl font-weight-bolder opacity-7">ชื่อ นาม-สกุล
-                                <b>ผู้ป่วย</b>
+                            <th class="text-uppercase text-secondary  text-3xl font-weight-bolder opacity-7">
+                                <b style="color:black"> ชื่อ นาม-สกุล ผู้ป่วย</b>
                             </th>
                             <th class="text-uppercase text-secondary  text-3xl font-weight-bolder opacity-7 ps-2">
-                                <b>อายุ</b>
+                                <b style="color:black">อายุ</b>
                             </th>
                             <th class="text-uppercase text-secondary  text-3xl font-weight-bolder opacity-7 ps-2">
-                                <b>hn</b>
+                                <b style="color:black">hn</b>
                             </th>
                             <th class="text-uppercase text-secondary  text-3xl font-weight-bolder opacity-7 ps-2">
-                                <b>ชื่อผู้ให้ข้อมูล</b>
+                                <b style="color:black">ชื่อผู้ให้ข้อมูล</b>
                             </th>
                             <th class="text-uppercase text-secondary  text-3xl font-weight-bolder opacity-7 ps-2">
-                                <b>เวลาที่เพิ่ม</b></th>
+                                <b style="color:black">เวลาที่เพิ่ม</b></th>
                             <th class="text-uppercase text-secondary  text-3xl font-weight-bolder opacity-7  ">
-                                <b>แบบประเมิน</b>
+                                <b style="color:black">แบบประเมิน</b>
                             </th>
                             <th class="text-uppercase text-secondary  text-3xl font-weight-bolder opacity-7 ps-2">
-                                <b>แก้ไขข้อมูล/ลบ</b>
+                                <b style="color:black">แก้ไขข้อมูล/ลบ</b>
                             </th>
 
                         </tr>

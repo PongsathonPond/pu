@@ -5,7 +5,7 @@ use App\Models\patient;
 use App\Models\asnForm1;
 use App\Models\asnForm2;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
 class asnform extends Controller
 {
 
@@ -65,7 +65,7 @@ class asnform extends Controller
         $tableName->f7_4 = $request->f7_4;
         $tableName->sumtotal = $request->sumtotal;
         $tableName->patient_id = $request->id;
-
+        $tableName->auth = Auth::user()->name;
         $tableName->save();
 
         return redirect()->route('pat')->with('successform', "บันทึกข้อมูลเรียบร้อย");
@@ -100,7 +100,7 @@ class asnform extends Controller
         $tableName->f10 = $sumf10;
         $tableName->sumtotal = $sumall;
         $tableName->patient_id = $request->id;
-
+        $tableName->auth = Auth::user()->name;
         $tableName->save();
 
         return redirect()->route('pat')->with('successform', "บันทึกข้อมูลเรียบร้อย");

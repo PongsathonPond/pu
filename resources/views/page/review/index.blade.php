@@ -13,19 +13,28 @@
                 <table class="table align-items-center mb-0" id="myTable">
                     <thead>
                     <tr>
-                        <th class="text-uppercase text-secondary  text-1xl font-weight-bolder opacity-7">ชื่อ นาม-สกุล
-                            ผู้ป่วย</th>
-                        <th class="text-uppercase text-secondary  text-1xl font-weight-bolder opacity-7 ps-2">อายุ
-                        </th>
-                        <th class="text-uppercase text-secondary  text-1xl font-weight-bolder opacity-7 ps-2">hn
+                        <th class="text-uppercase text-secondary  text-1xl font-weight-bolder opacity-7" >
+                            <b style="color:black"> ชื่อ นาม-สกุล ผู้ป่วย</b>
+                            </th>
+                        <th class="text-uppercase text-secondary  text-1xl font-weight-bolder opacity-7 ps-2">
+                            <b style="color:black">อายุ</b>
                         </th>
                         <th class="text-uppercase text-secondary  text-1xl font-weight-bolder opacity-7 ps-2">
-                            ชื่อผู้ให้ข้อมูล</th>
-                        <th>เวลาที่เพิ่ม</th>
+                            <b style="color:black">hn</b>
+                        </th>
+                       
+                        <th> <b style="color:black">ชื่อนามสกุลผู้ให้ข้อมูล</b></th>
+                  
                         <th class="text-uppercase text-secondary  text-1xl font-weight-bolder opacity-7  ">
-                            แบบประเมิน</th>
+                            <b style="color:black">เวลาที่เพิ่ม</b> </th>
+                            
+                        <th class="text-uppercase text-secondary  text-1xl font-weight-bolder opacity-7  ">
+                           <b style="color:black">ชื่อผู้เพิ่มข้อมูล</b> </th>
 
-
+                           <th class="text-uppercase text-secondary  text-1xl font-weight-bolder opacity-7  ">
+                            <b style="color:black">แบบประเมิน</b> </th>
+ 
+ 
                     </tr>
                     </thead>
 
@@ -65,6 +74,13 @@
                             <td>
                                 <b>
                                     {{ $item->created_at }}
+                                </b>
+
+                            </td>
+
+                            <td >
+                                <b>
+                                    {{ $item->auth }}
                                 </b>
 
                             </td>

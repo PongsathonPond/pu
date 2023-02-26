@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\patient;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
 class patientController extends Controller
 {
     public function index()
@@ -27,6 +27,7 @@ class patientController extends Controller
             'lastname_pat' => 'required|max:255',
             'age_pat' => 'required|max:255',
             'hn' => 'required',
+            'address' =>'required',
 
         ],
             ['title.required' => "กรุณาป้อนข้อมูล",
@@ -39,6 +40,7 @@ class patientController extends Controller
                 'lastname_pat.required' => "กรุณาป้อนข้อมูล",
                 'age_pat.required' => "กรุณาป้อนข้อมูล",
                 'hn.required' => "กรุณาป้อนข้อมูล",
+                'address.required' => "กรุณาป้อนที่อยู่",
 
             ]
         );
@@ -54,6 +56,8 @@ class patientController extends Controller
         $tableName->lastname_pat = $request->lastname_pat;
         $tableName->age_pat = $request->age_pat;
         $tableName->hn = $request->hn;
+        $tableName->address = $request->address;
+        $tableName->auth = Auth::user()->name;
         $tableName->save();
 
         return redirect()->route('pat')->with('success', "บันทึกข้อมูลเรียบร้อย");
