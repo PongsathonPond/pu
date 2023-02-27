@@ -139,6 +139,53 @@
                         </li>
                     @endif
 
+                    <li class="nav-item mt-3">
+                        <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">
+                            ออกรายงาน
+                        </h6>
+                    </li>
+                    @if (request()->routeIs('f1'))
+                    <li class="nav-item">
+                       
+                        <a class="nav-link text-white active bg-gradient-success" target="_blank" href="{{ route('f1') }}" target="_blank" >
+                            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                                <i class="material-icons opacity-10">table_view</i>
+                            </div>
+                            <span class="nav-link-text ms-1 ">แบบประเมิน1</span>
+                        </a>
+                    </li>
+                @else
+                    <li class="nav-item">
+                        <a class="nav-link text-white " href="{{ route('f1') }}" target="_blank">
+                            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center" >
+                                <i class="material-icons opacity-10">table_view</i>
+                            </div>
+                            <span class="nav-link-text ms-1">แบบประเมิน1</span>
+                        </a>
+                    </li>
+                @endif
+
+                @if (request()->routeIs('f2'))
+                <li class="nav-item">
+                   
+                    <a class="nav-link text-white active bg-gradient-success" target="_blank" href="{{ route('f2') }}" target="_blank" >
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">table_view</i>
+                        </div>
+                        <span class="nav-link-text ms-1 ">แบบประเมิน2</span>
+                    </a>
+                </li>
+            @else
+                <li class="nav-item">
+                    <a class="nav-link text-white " href="{{ route('f2') }}" target="_blank">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center" >
+                            <i class="material-icons opacity-10">table_view</i>
+                        </div>
+                        <span class="nav-link-text ms-1">แบบประเมิน2</span>
+                    </a>
+                </li>
+            @endif
+
 
 
             </ul>

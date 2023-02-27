@@ -49,4 +49,9 @@ Route::middleware([
     Route::get('/review2/{id}', [asnform::class, 'findreview2']);
     Route::post('patindex-update/{id}', [patientController::class, 'update']);
     Route::get('/patindex/delete/{id}', [patientController::class, 'delete']);
+
+    Route::get('/form1', [asnform::class, 'fom1'])->name('f1');
+    Route::get('/form2', [asnform::class, 'fom2'])->name('f2');
+
+
 });

@@ -9,6 +9,19 @@ use Illuminate\Support\Facades\Auth;
 class asnform extends Controller
 {
 
+
+    public function fom1(){
+
+        $p = asnForm1::all();
+        return view('page.export.formone',compact('p'));
+    }
+    public function fom2(){
+
+        $p = asnForm2::all();
+        return view('page.export.formtwo',compact('p'));
+    }
+
+
     public function index(){
 
         $p = patient::all();
