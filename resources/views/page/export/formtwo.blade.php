@@ -20,6 +20,7 @@
                     <th scope="col">ลำดับ</th>
                     <th scope="col">ชื่อ-นามสกุล ผู้ป่วย</th>
                     <th scope="col">อายุ</th>
+                    <th scope="col">ผลการประเมิน</th>
                     <th scope="col">เวลาที่เพิ่มข้อมูล</th>
                     <th scope="col">ผู้เพิ่ม</th>
                   </tr>
@@ -39,6 +40,16 @@
                     @foreach($item->asn2topat as $item1)
                     <td>{{$item1->age_pat}}  </td>
                     @endforeach
+                    <td>
+                      @if($item->sumtotal > 21)
+                     ครอบครัวมีความพร้อมในการดูแลผู้ป่วย
+
+                      @elseif($item->sumtotal <= 20)
+                          ครอบครัวไม่มีความพร้อมในการดูแลผู้ป่วย
+
+                      @endif
+
+              </td>
                     <td>{{$item->created_at}}</td>
                     <td>{{$item->auth}}</td>
                   </tr>
